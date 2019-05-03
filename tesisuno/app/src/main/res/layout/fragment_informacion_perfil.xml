@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.FragmentInformacionPerfil">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+    //NOMBRE
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            >
+            <EditText
+                android:id="@+id/editNombre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:ems="10"
+                android:hint="Nombre Completo"
+                android:inputType="textPersonName"
+                android:textColorHint="@color/negro" />
+        </android.support.design.widget.TextInputLayout>
+    //TELEFONO
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            >
+            <EditText
+                android:id="@+id/editTelefono"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:ems="10"
+                android:hint="Telefono"
+                android:inputType="textCapSentences"
+                android:textColorHint="@color/negro" />
+        </android.support.design.widget.TextInputLayout>
+    //DIRECCIÓN
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            >
+            <EditText
+                android:id="@+id/editDireccion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:ems="10"
+                android:hint="  Dirección (Indicaciónes)"
+                android:inputType="textCapSentences"
+                android:textColorHint="@color/negro"/>
+
+        </android.support.design.widget.TextInputLayout>
+    //BOTON UBICACIÓN
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:paddingLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/boton_rdn_blanco"
+                android:text="Seleccionar Ubicación Actual"
+                android:drawableLeft="@drawable/ic_ubicacion"
+                />
+    //BOTON CAMBIAR IMAGEN
+            <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:paddingLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/boton_rdn_blanco"
+        android:text="Cabiar foto de perfil"
+        android:drawableLeft="@drawable/ic_imagen"/>
+    //BOTON GUARDAR
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:paddingLeft="30dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/boton_rdn_verde"
+            android:text="Guardar Cambios"/>
+        </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/animation_dregradado"
+    android:layout_height="match_parent"
+    android:id="@+id/layout_inicio"
+    tools:context=".Actividades.Inicio">
+
+    <include android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+//GENERAL
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteY="102dp">
+
+
+        //1
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
+            android:orientation="horizontal">
+            // 1 IZQUIERDA
+
+            <LinearLayout
+                android:id="@+id/ly_crear_oferta"
+                android:layout_width="100dp"
+                android:layout_height="120dp"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/boton_rdn_blanco"
+                android:elevation="10dp"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/imgCrearOferta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="15dp"
+                    android:background="#00000000"
+                    app:srcCompat="@drawable/ic_oferta" />
+
+                <TextView
+                    android:id="@+id/inicio_crear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="5dp"
+                    android:text="Crear Oferta"
+                    android:textColor="@color/negro"
+                    android:textSize="14dp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            // 1 DERECHA
+
+            <LinearLayout
+                android:id="@+id/ly_demandas"
+                android:layout_width="100dp"
+                android:layout_height="120dp"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/boton_rdn_blanco"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/imgDemandas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="15dp"
+                    android:background="#00000000"
+                    app:srcCompat="@drawable/ic_tienda" />
+
+                <TextView
+                    android:id="@+id/inicio_ver"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="5dp"
+                    android:text="Demandas"
+                    android:textColor="@color/negro"
+                    android:textSize="14dp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ly_plan"
+                android:layout_width="100dp"
+                android:layout_height="120dp"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/boton_rdn_blanco"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/imgPlan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="15dp"
+                    android:background="#00000000"
+                    app:srcCompat="@drawable/ic_mapa" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="5dp"
+                    android:text="Planes"
+                    android:textColor="@color/negro"
+                    android:textSize="14dp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+        // 2
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:orientation="horizontal">
+            // 2 IZQUIERDA
+
+            <LinearLayout
+                android:id="@+id/ly_perfil"
+                android:layout_width="100dp"
+                android:layout_height="120dp"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/boton_rdn_blanco"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/imgPerfil"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="15dp"
+                    android:background="#00000000"
+                    app:srcCompat="@drawable/ic_usuario" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="5dp"
+                    android:text="Perfil"
+                    android:textColor="@color/negro"
+                    android:textSize="14dp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ly_dane"
+                android:layout_width="100dp"
+                android:layout_height="120dp"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/boton_rdn_blanco"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/imgDane"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="15dp"
+                    android:background="#00000000"
+                    app:srcCompat="@drawable/ic_estaditica" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="5dp"
+                    android:text="DANE"
+                    android:textColor="@color/negro"
+                    android:textSize="14dp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            // 2 DERECHA
+
+            <LinearLayout
+                android:id="@+id/ly_ayuda"
+                android:layout_width="100dp"
+                android:layout_height="120dp"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/boton_rdn_blanco"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/imgAyuda"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="15dp"
+                    android:background="#00000000"
+                    app:srcCompat="@drawable/ic_ayuda" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="5dp"
+                    android:text="Ayuda"
+                    android:textColor="@color/negro"
+                    android:textSize="14dp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+
+        // 3
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:orientation="horizontal">
+            // 3 IZQUIERDA
+
+            <LinearLayout
+                android:id="@+id/ly_chats"
+                android:layout_width="100dp"
+                android:layout_height="120dp"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/boton_rdn_blanco"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/imgChat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="15dp"
+                    android:background="#00000000"
+                    app:srcCompat="@drawable/ic_chat" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="5dp"
+                    android:text="Chats "
+                    android:textColor="@color/negro"
+                    android:textSize="14dp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            // 3 DERECHA
+
+            <LinearLayout
+                android:layout_width="100dp"
+                android:layout_height="120dp"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/boton_rdn_blanco"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/imgNotificaciones"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="15dp"
+                    android:background="#00000000"
+                    app:srcCompat="@drawable/ic_notificacion" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="5dp"
+                    android:text="Notificaciones"
+                    android:textColor="@color/negro"
+                    android:textSize="14dp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="100dp"
+                android:layout_height="120dp"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/boton_rdn_blanco"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="15dp"
+                    android:background="#00000000"
+                    app:srcCompat="@drawable/ic_config" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="5dp"
+                    android:text="Configuración"
+                    android:textColor="@color/negro"
+                    android:textSize="14dp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

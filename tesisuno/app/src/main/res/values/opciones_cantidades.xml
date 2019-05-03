@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="cantidades">
+        <item>CANTIDAD</item>
+        <item>KILOGRAMOS</item>
+        <item>ARROBAS</item>
+        <item>TONELADAS</item>
+    </string-array>
+    <string-array name="sexos">
+        <item>Masculino</item>
+        <item>Femenino</item>
+    </string-array>
+</resources>

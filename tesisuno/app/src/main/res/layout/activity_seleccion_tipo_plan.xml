@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Actividades.SeleccionTipoPlan">
+    <include android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:textColor="@color/negro"
+            android:textSize="18dp"
+            android:layout_gravity="center_horizontal"
+            android:text="Selecciona una de las categorias para comparar las diferentes maneras de comprar el mismo producto."/>
+        <Button
+            android:id="@+id/busAgrupacion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:drawableTop="@drawable/ic_grupo"
+            android:background="@color/blanco"
+            android:elevation="20dp"
+            android:layout_marginTop="5dp"
+            android:paddingTop="10dp"
+            android:text="Agrupación de Productores"/>
+        <Button
+            android:id="@+id/busUbicacion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:background="@color/blanco"
+            android:elevation="20dp"
+            android:layout_marginTop="5dp"
+            android:paddingTop="20dp"
+            android:drawableTop="@drawable/ic_cerca"
+            android:text="Más cercanos"/>
+        <Button
+            android:id="@+id/busCantidad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:paddingTop="20dp"
+            android:background="@color/blanco"
+            android:drawableTop="@drawable/ic_balanza"
+            android:elevation="20dp"
+            android:layout_marginTop="5dp"
+            android:text="Por Cantidad"/>
+
+
+            <Button
+                android:id="@+id/busPrecio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.25"
+                android:background="@color/blanco"
+                android:elevation="20dp"
+                android:drawableTop="@drawable/ic_dinero"
+                android:paddingTop="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:text="Mejor Precio"/>
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

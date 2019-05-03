@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+ <string-array name="combo_productos">
+     <item>Productos</item>
+     //A
+     <item>Aguacate</item>
+     //B
+     <item>Banano </item>
+     //C
+     <item>Café</item>
+     <item>Caña</item>
+     <item>Cacao</item>
+     <item>Cebada </item>
+     <item>Caña de Azúcar</item>
+     //D
+     //E
+     //F
+     //G
+     //H
+     //I
+     //J
+     //K
+     //L
+     <item>Limón</item>
+     //M
+     <item>Maíz</item>
+     <item>Mango</item>
+     <item>Mandarina</item>
+     //N
+     <item>Naranja</item>
+     //Ñ
+     //O
+     //P
+     <item>Papa</item>
+     <item>Plátano</item>
+     //Q
+     //R
+     //S
+     //T
+     <item>Tabaco</item>
+     <item>Trigo </item>
+     //U
+     //V
+     //W
+     //X
+     //Y
+     //Z
+
+
+ </string-array>
+    
+</resources>

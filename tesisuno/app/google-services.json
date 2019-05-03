@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "455373012986",
+    "firebase_url": "https://imagenestesis-dc1cf.firebaseio.com",
+    "project_id": "imagenestesis-dc1cf",
+    "storage_bucket": "imagenestesis-dc1cf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:455373012986:android:08f0114f63c73e44",
+        "android_client_info": {
+          "package_name": "com.unab.tesisegac.tesisuno"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "455373012986-ec5cukhf8ma9sh1o1fhkqvsugvq48h9f.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.unab.tesisegac.tesisuno",
+            "certificate_hash": "843873cf10663b61b3cca9d7bfdefee5df01424c"
+          }
+        },
+        {
+          "client_id": "455373012986-nsq77hlqlnrfk339o1lt89tdkqflv9mh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCntxo54hSoHaWMyGsO1QrOy4g3FXgFbmM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "455373012986-nsq77hlqlnrfk339o1lt89tdkqflv9mh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

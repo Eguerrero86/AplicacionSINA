@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActividadeAgricultor.CrearOfertaUno">
+    <include android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="450dp"
+            android:orientation="vertical"
+            android:layout_marginTop="80dp"
+            android:background="@drawable/ly_borde"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Creación de Oferta"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/negro"
+                android:layout_gravity="center_horizontal"
+                android:textSize="25dp"/>
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/negro"
+                android:layout_marginTop="10dp"
+                >
+                <EditText
+                    android:id="@+id/coProducto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:hint="Producto"
+                    android:imeOptions="actionNext"
+                    android:inputType="textCapSentences"
+                    />
+            </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/negro"
+                android:layout_marginTop="10dp"
+                >
+                <EditText
+                    android:id="@+id/coVariedad"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:hint="Variedad"
+                    android:imeOptions="actionNext"
+                    android:inputType="textCapSentences"
+                    />
+            </android.support.design.widget.TextInputLayout>
+            //CANTIDAD-----------------------
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:textColorHint="@color/negro">
+
+                    <EditText
+                        android:id="@+id/coCantidadCosecha"
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:hint="Cantidad"
+                        android:inputType="number"
+                        android:imeOptions="actionNext"
+                        android:textColorHint="@color/negro" />
+                </android.support.design.widget.TextInputLayout>
+                <Spinner
+                    android:id="@+id/coCantidades"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="130dp"
+                    android:minHeight="50dp"
+                    android:textAlignment="center"
+                    android:elevation="10dp"
+                    android:background="@drawable/boton_rdn_blanco"
+                    android:layout_height="wrap_content"></Spinner>
+
+            </LinearLayout>
+            <Switch
+                android:id="@+id/coEstado"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="10dp"
+                android:onClick="onSwitchClicked"
+                android:textColor="@color/negro"
+                android:text="¿Tu Cosecha está lista?    " />
+            //FECHA ----------------------------------
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textColorHint="@color/negro">
+
+                <EditText
+                    android:id="@+id/coFechaCosecha"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:hint="Fecha para la recolección de la cosecha"
+                    android:textSize="17dp"
+                    android:inputType="date"
+                    android:textColorHint="@color/negro" />
+            </android.support.design.widget.TextInputLayout>
+
+
+
+
+            <Button
+                android:id="@+id/coSiguiente"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/boton_rdn_verde"
+                android:text="Siguiente"
+                android:textColor="@color/blanco"/>
+
+
+        </LinearLayout>
+    </FrameLayout>
+</android.support.constraint.ConstraintLayout>

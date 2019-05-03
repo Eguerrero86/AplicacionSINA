@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActividadeAgricultor.CrearOfertaDos">
+    <include android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/ly_borde"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Creación de Oferta"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/negro"
+                android:layout_gravity="center_horizontal"
+                android:textSize="25dp"/>
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/negro"
+                android:layout_marginTop="20dp"
+                >
+                <EditText
+                    android:id="@+id/coDireccion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:hint="Ubicación de la cosecha"
+                    android:imeOptions="actionNext"
+                    android:inputType="textCapSentences"
+                    />
+            </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/negro"
+
+                >
+                <EditText
+                    android:id="@+id/coCiudad"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:hint="Ciudad"
+                    android:imeOptions="actionNext"
+                    android:inputType="textCapSentences"
+                    />
+            </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/negro">
+
+                <EditText
+                    android:id="@+id/coPresio"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:hint="Presio Aproximado"
+                    android:inputType="number"
+                    android:imeOptions="actionNext"
+                    android:textColorHint="@color/negro" />
+            </android.support.design.widget.TextInputLayout>
+
+                <Button
+                    android:id="@+id/coUbicacion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="7dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:background="@drawable/boton_rdn_blanco"
+                    android:text="   Ubicación    "
+                    android:drawableStart="@drawable/ic_ubicacion"
+                    android:drawableLeft="@drawable/ic_ubicacion" />
+
+            //FECHA ----------------------------------
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textColorHint="@color/negro"/>
+            <MultiAutoCompleteTextView
+                android:id="@+id/coObservaciones"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:hint="Descripción"
+                android:background="@drawable/ly_borde"
+                android:padding="5dp"
+                android:textAlignment="textStart"
+                android:textColorHint="@color/negro"
+                android:imeOptions="actionNext"
+                android:inputType="textCapSentences"
+                android:gravity="start" />
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_marginBottom="10dp">
+            <Button
+                android:id="@+id/coAtras"
+                android:layout_width="150dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/boton_rnd_rojo"
+                android:text="Atras"
+                android:textColor="@color/blanco"/>
+             <Button
+                 android:id="@+id/coGuardarOferta"
+                 android:layout_width="150dp"
+                 android:layout_weight="1"
+                 android:layout_height="wrap_content"
+                 android:layout_marginTop="20dp"
+                 android:layout_marginRight="10dp"
+                 android:layout_marginLeft="10dp"
+                 android:background="@drawable/boton_rdn_verde"
+                 android:text="Siguiente"
+                 android:textColor="@color/blanco"/>
+         </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+</android.support.constraint.ConstraintLayout>

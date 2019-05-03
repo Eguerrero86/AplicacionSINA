@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Actividades.Perfil">
+    <include android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.mikhaellopez.circularimageview.CircularImageView
+                android:id="@+id/perfil_imgPerfil"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="10dp"
+                app:civ_border_color="#EEEEEE"
+                app:civ_border_width="0dp"
+                app:civ_shadow="true"
+                app:civ_shadow_color="#000000"
+                app:civ_shadow_radius="15" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+            <TextView
+                android:id="@+id/perfil_nombreUsuario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:textStyle="bold"
+                android:textSize="18dp"
+                android:textColor="@color/negro"
+                android:text="Miguel Andres Rocha" />
+            <TextView
+                android:id="@+id/perfil_correo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:textStyle="bold"
+                android:textColor="@color/negro"
+                android:text="" />
+            <TextView
+                android:id="@+id/perfil_telefono"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:textStyle="bold"
+                android:textColor="@color/negro"
+                android:text="3202803001" />
+            <TextView
+                android:id="@+id/perfil_departamento"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:textStyle="bold"
+                android:textColor="@color/negro"
+                android:text="Santander" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnDemandasPerfil"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:background="@drawable/boton_rdn_blanco"
+                android:drawableLeft="@drawable/ic_tiend_vc"
+                android:elevation="5dp"
+                android:textSize="12dp"
+                android:textColor="@color/azul"
+                android:onClick="onClick"
+                android:paddingLeft="3dp"
+                android:text="Demandas" />
+
+            <Button
+                android:id="@+id/btnOfertasPerfil"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:background="@drawable/boton_rdn_blanco"
+                android:drawableLeft="@drawable/ic_planta_vc"
+                android:elevation="5dp"
+                android:textSize="12dp"
+                android:textColor="@color/verde"
+                android:paddingLeft="3dp"
+                android:onClick="onClick"
+                android:text="Mis Ofertas" />
+
+            <Button
+                android:id="@+id/btnInformacionPerfil"
+                android:layout_width="112dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:paddingLeft="3dp"
+                android:background="@drawable/boton_rdn_blanco"
+                android:drawableLeft="@drawable/ic_editar_vc"
+                android:elevation="5dp"
+                android:text="Editar Perfil"
+                android:onClick="onClick"
+                android:textColor="@color/amarillo"
+                android:textSize="12dp" />
+        </LinearLayout>
+
+        <android.support.v4.widget.NestedScrollView
+            android:id="@+id/contenedorFragmensPerfil"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:paddingTop="10dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingBottom="10dp"
+            android:background="@drawable/ly_borde"
+            android:fillViewport="true">
+
+
+        </android.support.v4.widget.NestedScrollView>
+
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
