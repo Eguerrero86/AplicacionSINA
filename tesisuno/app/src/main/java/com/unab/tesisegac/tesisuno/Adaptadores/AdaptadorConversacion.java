@@ -47,20 +47,20 @@ public class AdaptadorConversacion extends RecyclerView.Adapter<HolderMensaje> {
                 .fitCenter()
                 .centerInside()
                 .into(holderMensaje.getFoto());
-        
-            if (listMensajes.get(i).getType_mensaje().equals("2")) {
-                holderMensaje.getFoto().setVisibility(View.VISIBLE);
-                holderMensaje.getMensaje().setVisibility(View.VISIBLE);
-                Glide.with(contex)
-                        .load(listMensajes.get(i).getUrlFoto())
-                        .fitCenter()
-                        .centerInside()
-                        .into(holderMensaje.getImagenEnviada());
-            } else if (listMensajes.get(i).getType_mensaje().equals("1")) {
-                holderMensaje.getFoto().setVisibility(View.VISIBLE);
-                holderMensaje.getMensaje().setVisibility(View.VISIBLE);
 
-            }
+        if (listMensajes.get(i).getType_mensaje().equals("2")) {
+            holderMensaje.getFoto().setVisibility(View.VISIBLE);
+            holderMensaje.getMensaje().setVisibility(View.VISIBLE);
+            Glide.with(contex)
+                    .load(listMensajes.get(i).getUrlFoto())
+                    .fitCenter()
+                    .centerInside()
+                    .into(holderMensaje.getImagenEnviada());
+        } else if (listMensajes.get(i).getType_mensaje().equals("1")) {
+            holderMensaje.getFoto().setVisibility(View.VISIBLE);
+            holderMensaje.getMensaje().setVisibility(View.VISIBLE);
+
+        }
 
         Long codigo=listMensajes.get(i).getHora();
         Date date=new Date(codigo);

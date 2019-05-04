@@ -39,7 +39,7 @@ public class AdaptadorTarjeta extends RecyclerView.Adapter<AdaptadorTarjeta.View
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolderTarjeta holder, int i) {
-        Log.d("creación tarjets", "creación"+i+" "+tarjetas.get(i).getProducto());
+        Log.d("creaciÃ³n tarjets", "creaciÃ³n"+i+" "+tarjetas.get(i).getProducto());
         holder.producto.setText(tarjetas.get(i).getProducto());
         holder.cantidad.setText(tarjetas.get(i).getCantidad());
         Glide.with(contex)

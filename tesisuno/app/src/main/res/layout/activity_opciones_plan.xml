@@ -56,9 +56,9 @@
             android:orientation="horizontal">
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="200dp"
                 android:layout_height="wrap_content"
-                android:text="Cantidad de Productores:"
+                android:text="Productores:"
                 android:textColor="@color/negro"
                 android:textSize="20dp" />
 
@@ -78,7 +78,7 @@
             android:orientation="horizontal">
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:text="Precio aproximado:"
                 android:textColor="@color/negro"
@@ -100,7 +100,7 @@
             android:orientation="horizontal">
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:text="Cantidad de producto:"
                 android:textColor="@color/negro"
@@ -121,7 +121,7 @@
             android:orientation="horizontal">
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:text="Ciudad:"
                 android:textColor="@color/negro"

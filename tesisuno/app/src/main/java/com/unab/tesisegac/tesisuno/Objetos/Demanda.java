@@ -7,39 +7,33 @@ import java.io.Serializable;
 
 
 public class Demanda implements Serializable {
-        @SerializedName("id_oferta")
+        @SerializedName("id_demanda")
         @Expose
-        private Integer idOferta;
+        private Integer idDemanda;
         @SerializedName("nombre_producto")
         @Expose
         private String nombreProducto;
-        @SerializedName("unidad_medida_producto")
+        @SerializedName("medida_producto")
         @Expose
-        private String unidadMedidaProducto;
+        private String medidaProducto;
         @SerializedName("cantidad_producto")
         @Expose
         private Integer cantidadProducto;
-        @SerializedName("precio_producto")
-        @Expose
-        private Integer precioProducto;
         @SerializedName("variedad_producto")
         @Expose
         private String variedadProducto;
-        @SerializedName("descripcion_producto")
+        @SerializedName("descripcion_demanda")
         @Expose
-        private String descripcionProducto;
-        @SerializedName("lugar_oferta")
+        private String descripcionDemanda;
+        @SerializedName("direccion_demanda")
         @Expose
-        private String lugarOferta;
-        @SerializedName("estado_oferta")
+        private String direccionDemanda;
+        @SerializedName("estado_demanda")
         @Expose
-        private String estadoOferta;
-        @SerializedName("fecha_recoleccion_oferta")
+        private String estadoDemanda;
+        @SerializedName("consumidor")
         @Expose
-        private String fechaRecoleccionOferta;
-        @SerializedName("productor")
-        @Expose
-        private Productor productor;
+        private Consumidor consumidor;
         @SerializedName("ciudad")
         @Expose
         private Ciudad ciudad;
@@ -47,13 +41,20 @@ public class Demanda implements Serializable {
         @Expose
         private String createAt;
 
+    public String getDireccionDemanda() {
+        return direccionDemanda;
+    }
 
-        public Integer getIdOferta() {
-            return idOferta;
+    public void setDireccionDemanda(String direccionDemanda) {
+        this.direccionDemanda = direccionDemanda;
+    }
+
+    public Integer getIdDemanda() {
+            return idDemanda;
         }
 
-        public void setIdOferta(Integer idOferta) {
-            this.idOferta = idOferta;
+        public void setIdDemanda(Integer idDemanda) {
+            this.idDemanda = idDemanda;
         }
 
         public String getNombreProducto() {
@@ -64,12 +65,12 @@ public class Demanda implements Serializable {
             this.nombreProducto = nombreProducto;
         }
 
-        public String getUnidadMedidaProducto() {
-            return unidadMedidaProducto;
+        public String getMedidaProducto() {
+            return medidaProducto;
         }
 
-        public void setUnidadMedidaProducto(String unidadMedidaProducto) {
-            this.unidadMedidaProducto = unidadMedidaProducto;
+        public void setMedidaProducto(String medidaProducto) {
+            this.medidaProducto = medidaProducto;
         }
 
         public Integer getCantidadProducto() {
@@ -79,15 +80,7 @@ public class Demanda implements Serializable {
         public void setCantidadProducto(Integer cantidadProducto) {
             this.cantidadProducto = cantidadProducto;
         }
-
-        public Integer getPrecioProducto() {
-            return precioProducto;
-        }
-
-        public void setPrecioProducto(Integer precioProducto) {
-            this.precioProducto = precioProducto;
-        }
-
+        
         public String getVariedadProducto() {
             return variedadProducto;
         }
@@ -96,44 +89,28 @@ public class Demanda implements Serializable {
             this.variedadProducto = variedadProducto;
         }
 
-        public String getDescripcionProducto() {
-            return descripcionProducto;
+        public String getDescripcionDemanda() {
+            return descripcionDemanda;
         }
 
-        public void setDescripcionProducto(String descripcionProducto) {
-            this.descripcionProducto = descripcionProducto;
+        public void setDescripcionDemanda(String descripcionDemanda) {
+            this.descripcionDemanda = descripcionDemanda;
+        }
+        
+        public String getEstadoDemanda() {
+            return estadoDemanda;
         }
 
-        public String getLugarOferta() {
-            return lugarOferta;
+        public void setEstadoOferta(String estadoDemanda) {
+            this.estadoDemanda = estadoDemanda;
         }
 
-        public void setLugarOferta(String lugarOferta) {
-            this.lugarOferta = lugarOferta;
+        public Consumidor getConsumidor() {
+            return consumidor;
         }
 
-        public String getEstadoOferta() {
-            return estadoOferta;
-        }
-
-        public void setEstadoOferta(String estadoOferta) {
-            this.estadoOferta = estadoOferta;
-        }
-
-        public String getFechaRecoleccionOferta() {
-            return fechaRecoleccionOferta;
-        }
-
-        public void setFechaRecoleccionOferta(String fechaRecoleccionOferta) {
-            this.fechaRecoleccionOferta = fechaRecoleccionOferta;
-        }
-
-        public Productor getProductor() {
-            return productor;
-        }
-
-        public void setProductor(Productor productor) {
-            this.productor = productor;
+        public void setConsumidor(Consumidor consumidor) {
+            this.consumidor = consumidor;
         }
 
         public Ciudad getCiudad() {

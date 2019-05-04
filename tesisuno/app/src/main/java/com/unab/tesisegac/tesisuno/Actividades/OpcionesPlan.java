@@ -1,9 +1,12 @@
 package com.unab.tesisegac.tesisuno.Actividades;
 
+import android.graphics.Color;
+import android.location.Location;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -14,6 +17,8 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.android.gms.maps.model.Polyline;
+import com.google.android.gms.maps.model.PolylineOptions;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.unab.tesisegac.tesisuno.Objetos.Demanda;
@@ -35,10 +40,10 @@ public class OpcionesPlan extends AppCompatActivity implements OnMapReadyCallbac
     private GoogleMap mMap;
     Demanda demanda;
     List<Oferta> ofertas;
-    String tipoDePlan;
+    String tipoDePlan,latitud, longitud;
     TextView productores, precio, cantidad, ciudad;
     Button anterior, siguiente;
-    int opcion=0, latitud, longitud;
+    int opcion;
     SupportMapFragment mapFragment;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,6 +62,7 @@ public class OpcionesPlan extends AppCompatActivity implements OnMapReadyCallbac
 
         //INICIALIZACIÓN
         ofertas = new ArrayList<Oferta>();
+        opcion=0;
         productores=findViewById(R.id.opProductores);
         precio=findViewById(R.id.opPrecio);
         cantidad=findViewById(R.id.opCantidad);
@@ -81,16 +87,45 @@ public class OpcionesPlan extends AppCompatActivity implements OnMapReadyCallbac
                 Log.d("seleccion", "---------------precio");
                 break;
         }
-
+        if (opcion==0){
+            anterior.setVisibility(View.GONE);
+        }
+        siguiente.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                opcion=opcion+1;
+                Log.e("opcion", " "+opcion);
+            }
+        });
     }
 
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
         // Add a marker in Sydney and move the camera
-        LatLng sydney = new LatLng(latitud, latitud);
-        mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(sydney, 13));
+        Double latD=Double.parseDouble(demanda.getCiudad().getLatCiudad());
+        Double longD=Double.parseDouble(demanda.getCiudad().getLongCiudad());
+        Double latO=Double.parseDouble(latitud);
+        Double longO=Double.parseDouble(longitud);
+        Location oferta1= new Location("OFERTA");
+        oferta1.setLatitude(latO);
+        oferta1.setLongitude(longO);
+        LatLng oferta = new LatLng(latO, longO);
+        mMap.addMarker(new MarkerOptions().position(oferta).title("Mejor Oferta"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(oferta, 10));
+        Location demanda1= new Location("DEMANDA");
+        demanda1.setLatitude(latD);
+        demanda1.setLongitude(longD);
+        LatLng demanda = new LatLng(latD, longD);
+        mMap.addMarker(new MarkerOptions().position(demanda).title("Ubicación Demanda"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(demanda, 10));
+        float distancia=oferta1.distanceTo(demanda1);
+        Log.d("Distancia entre puntos", ""+distancia);
+        Polyline line = mMap.addPolyline(new PolylineOptions()
+                .add(demanda, oferta)
+                .width(5)
+                .color(Color.RED));
+
     }
 
     public void traerOfertasExacta() {
@@ -139,4 +174,5 @@ public class OpcionesPlan extends AppCompatActivity implements OnMapReadyCallbac
               latitud=ofertas.get(opcion).getCiudad().getLatCiudad();
              mapFragment.getMapAsync(this);
          }
+
 }

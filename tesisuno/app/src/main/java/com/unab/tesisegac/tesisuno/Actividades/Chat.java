@@ -69,7 +69,7 @@ public class Chat extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
-        //Inicialización
+        //InicializaciÃƒÂ³n
         productor = new Productor();
         consumidor = new Consumidor();
         usuarioConverzacion=new Usuario();

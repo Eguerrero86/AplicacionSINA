@@ -81,7 +81,7 @@ public class VerDemandas extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
-        //Inicialización
+        //InicializaciÃ³n
         tarjetas = new ArrayList<>();
         demandas = new ArrayList<Demanda>();
         imagenesDemanda = new ArrayList<String>();
